@@ -1,0 +1,16 @@
+body{
+	background:lightgrey;
+}
+#section{
+	background-color:#FFE4C4;
+	width:350px;
+	padding:20px;
+}
+.label{
+	font-weight:bold;
+}
+.error{
+		background-color:#7FFF00;
+		padding:7px;
+		width:100px;
+}

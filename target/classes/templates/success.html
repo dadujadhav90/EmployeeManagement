@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org" th:replace="index::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}">Signup</title>
+</head>
+<body>
+	<section>
+		<h3>Login Successfully</h3>
+		<h2>Username is :</h2><h3 th:text="${emp.username}"></h3>
+		<h2>Password is :</h2><h3 th:text="${emp.password}"></h3>
+	</section>
+</body>
+</html>

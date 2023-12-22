@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="index::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>Signup</title>
+</head>
+<body>
+	<section id="section">
+		<form th:action="@{/process}" method="post" th:object="${emp}">
+			<table>
+				<tr>
+					<td><label class="label">Username</label></td>
+					<td><input type="text" name="username" th:value="${emp.username}"></td>
+				</tr>
+				<tr><td></td><td class="error" th:each="e:${#fields.errors('username')}" th:text="${e}"></td></tr>
+				<tr>
+					<td><label class="label">Password</label></td>
+					<td><input type="password" name="password"></td>
+				</tr>
+				<tr><td></td><td class="error" th:each="e:${#fields.errors('password')}" th:text="${e}"></td></tr>
+				<tr>
+					<td><input type="submit" value="Register" id="btn"></td>
+					<td><input type="reset" value="Reset" id="btn"></td>
+				</tr>
+			</table>	
+		</form>
+	</section>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn").css({"background-color":"cyan"});
+		})
+	</script>
+	
+</body>
+</html>
